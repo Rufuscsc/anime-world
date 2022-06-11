@@ -7,11 +7,11 @@
 .hero{
     width: 100%;
     height: 100vh;
-    background-image: url(./images/AnimeX_1093670.jpeg);
     background-size: cover;
     background-position: center;
     position: relative;
     overflow: hidden;
+    animation: animate 16s ease-in-out infinite;
 }
 
 .logo{
@@ -105,6 +105,24 @@ button{
     bottom: -80px;
 }
 
+@keyframes animate {
+    0%,100%{
+        background-image: url(images/AnimeX_1093670.jpeg);
+    }
+    25%{
+        background-image: url(images/gojou.jpg);
+    }
+    50%{
+        background-image: url(images/kurred.jpg);
+    }
+    70%{
+        background-image: url(images/AnimeX_1113492.jpeg);
+    }
+    90%{
+        background-image: url(images/dante.jpg);
+    }
+}
+
 @keyframes fire {
     0%{
         transform: translateY(0);
@@ -142,4 +160,22 @@ button{
 }
 .tool img:nth-child(7){
     animation-delay: 5s;
+}
+
+
+
+.hero img:nth-child(1){
+    animation-delay: 3s;
+}
+.hero img:nth-child(2){
+    animation-delay: 4s;
+}
+.hero img:nth-child(3){
+    animation-delay: 3s;
+}
+.hero img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.hero img:nth-child(5){
+    animation-delay: 3.5s;
 }
