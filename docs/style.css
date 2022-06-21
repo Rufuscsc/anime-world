@@ -7,11 +7,23 @@
 .hero{
     width: 100%;
     height: 100vh;
+    background-image: url(images/AnimeX_1093670.jpeg);
     background-size: cover;
     background-position: center;
     position: relative;
     overflow: hidden;
     animation: animate 16s ease-in-out infinite;
+}
+
+.hero::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(25, 19, 19);
+    opacity: 0.5;
 }
 
 .logo{
@@ -21,12 +33,16 @@
 
 .navbar{
     width: 85%;
+    left: 0;
     height: 17%;
     margin: auto;
+    padding:1px 100px;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: transparent;
+    transition: 0.3s ease;
 }
 
 button{
@@ -48,6 +64,25 @@ button{
     z-index: 2;
 }
 
+.content button::after{
+    display: inline-block;
+    background-color: #ffff;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #0000;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.content button:hover{
+    background-color: rgb(19, 15, 15);
+}
+
 .h1{
     font-size: 40px;
     margin:10px 0 30px;
@@ -57,7 +92,6 @@ button{
 .side-bar{
     width: 50px;
     height: 100vh;
-    background: linear-gradient(#00545d, #000729);
     position: absolute;
     right: 0;
     top: 0;
@@ -70,10 +104,30 @@ button{
     cursor: pointer;
 }
 
-.social-links img, .useful-links img{
+.social-links img{
     width: 25px;
     margin: 5px auto;
     cursor: pointer;
+}
+
+.social-links img::after{
+    display: inline-block;
+    background-color: #ffff;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #0000;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.social-links img:hover{
+    background-color: rgb(24, 19, 19);
+    border-radius: 20px;
 }
 
 .social-links{
@@ -84,14 +138,7 @@ button{
     transform: translateY(-50%);
 }
 
-.useful-links{
-    width: 50px;
-    text-align: center;
-    position: absolute;
-    bottom: 30px;
-}
-
-.tool img{
+/*.tool img{
     width: 50px;
     animation: fire 7s linear infinite;
 }
@@ -178,12 +225,39 @@ button{
 }
 .hero img:nth-child(5){
     animation-delay: 3.5s;
+}*/
+
+.menu-items a{
+    margin-right: 40px;
+    position: relative;
+    display:inline-flex;
+    font-size: 1em;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.menu-items a::before{
+    position: absolute;
+    content: "";
+    bottom:0;
+    left:0;
+    width: 0%;
+    height: 3px;
+    background-color: #000;
+    transition: 0.3s ease;
+}
+
+.menu-items a:hover::before{
+    width: 100%;
 }
 
 .right-col{
     float: right;
-    margin-right: 6%;
-    margin-top: 120px;
+    margin-left: 800px;
+    margin-top: 40px;
     display:flex;
     align-items: center;
 }
@@ -196,7 +270,8 @@ button{
 }
 
 #icon{
-    width: 80px;
+    width: 40px;
     cursor: pointer;
     border-radius: 130px;
+    background: transparent;
 }
