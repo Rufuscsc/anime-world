@@ -179,3 +179,24 @@ button{
 .hero img:nth-child(5){
     animation-delay: 3.5s;
 }
+
+.right-col{
+    float: right;
+    margin-right: 6%;
+    margin-top: 120px;
+    display:flex;
+    align-items: center;
+}
+
+.right-col p{
+    font-size: 18px;
+    color:#fbfcfd;
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+#icon{
+    width: 80px;
+    cursor: pointer;
+    border-radius: 130px;
+}
